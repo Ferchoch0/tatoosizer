@@ -1,0 +1,164 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* El documento ocupa toda la altura de la ventana */
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columnas */
+  }
+  
+  
+  /* *//* *//* *//* *//* *//*  NABVAR *//* *//* *//* *//* *//* *//* */
+  
+       nav {
+        position: relative; 
+        justify-content: start;
+        top: 0;  
+        left: 0;   
+        width: 100%; 
+        z-index: 1000; 
+        background: var(--soft-dark);
+       }
+    
+       nav a {
+        text-decoration: none;
+        font-size: 2rem;
+        line-height: 50px;
+        color: var(--white);
+        margin: 0 1rem; 
+        }  
+  
+  
+  #mainContainer {
+    flex: 1; /* Este contenedor ocupa el espacio restante entre el navbar y el footer */
+    display: flex;
+    flex-direction: column; /* Permite organizar su contenido en columnas */
+  }
+  
+  #imageUpload{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+        
+  #buttonContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    overflow: auto;
+    padding-top: 5rem;
+  }              
+  
+    #firstImageButton {
+      background-color: var(--teal);
+      border-style: none;
+      padding: 3rem;
+      margin-top: 2rem;
+      border-radius: 24px;
+      color: var(--white);
+      font-size: 24px;
+    }
+  
+  #optionContainer{
+    justify-content: center;
+    position: relative; 
+    width: 100%; 
+    z-index: 1000; 
+    background: var(--soft-dark);
+    border-top:  1px var(--gray);
+  }
+  
+    #addImageButton, #deleteImageButton{
+      background-color: var(--gray-dark);
+      border-style: none;
+      padding: 5px;
+      margin: 0.25rem;
+      color: var(--white);
+      font-size: 14px;
+    }
+  
+  #imagePreview {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      overflow: auto;
+      background: var(--gray-dark);
+      width: 100%; /* Ocupa el ancho completo de la página */
+      align-items: center;
+      justify-content: center;
+    }
+  
+    /* Hacer que el canvas ocupe todo el ancho */
+  .image-wrapper canvas {
+    margin: 1rem;
+    border: 1px solid #ccc; /* Opcional: bordes para visualizar mejor */
+  }
+  
+  /* Opcional: Asegurarse de que los contenedores de las imágenes no se deformen */
+  .image-wrapper {
+    width: 100%; /* Asegura que el contenedor se ajuste al ancho del canvas */
+    margin-bottom: 20px; /* Espacio entre las imágenes */
+    text-align: center; /* Centra el contenido dentro del wrapper */
+  }
+  
+  /* Opcional: Estilo de los controles */
+  
+    
+    #controls{
+     
+      display: flex;
+      flex-direction: column;
+      background-color: var(--dark);
+      width: 100%;
+    }
+  
+    .controlsContainer{
+      display: flex;
+      flex-direction: row;
+    }
+    
+    #groupButton, #downloadButton{
+      background-color: var(--transparent);
+      border: solid 2px var(--button);
+      border-radius: 24px;
+      color: var(--white);
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 1rem;
+    }
+  
+    #groupButton:hover, #downloadButton:hover{
+      background-color: var(--button);
+    }
+    
+  
+    .image-wrapper canvas {
+      width: 100px; /* Visualización ajustada */
+      height: 100px;
+      object-fit: cover; /* Escala proporcional */
+      border: 1px solid #ccc; /* Opcional: bordes para que se vea más claro */
+  }
+
+  @media (max-width: 600px) {
+
+    #buttonContainer h1{
+      font-size: 1.25rem;
+    }
+  
+    .controlSection2{
+      display: none;
+    }
+  
+    #groupButton, #downloadButton{
+      padding: 15px 22px;
+      font-size: 13px;
+      margin: 0.5rem;
+    }
+  
+  
+    
+    }
