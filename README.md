@@ -17,3 +17,6 @@ La aplicación permite al usuario seleccionar varias imágenes de tatuajes, redi
 
 - **Lenguaje**: JS, CSS HTML
 - **IDE o Herramienta de desarrollo**: VS code
+
+## 🎯 Donde esta alojado
+- **Web**: https://tattosizer.netlify.app/
