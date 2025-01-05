@@ -6,37 +6,53 @@ html, body {
   flex-direction: column; /* Organiza el contenido en columnas */
 }
 
-#mainContainer {
-  flex: 1; /* Este contenedor ocupa el espacio restante entre el navbar y el footer */
-  display: flex;
-  flex-direction: column; /* Permite organizar su contenido en columnas */
+.logo {
+  height: 250px;
+  width: 250px;
 }
 
-#imageUpload{
+#mainContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
-      
+  
 #buttonContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1;
   overflow: auto;
-  padding-top: 5rem;
-}              
+  padding: 3rem;
+}
 
-  #firstImageButton {
-    background-color: var(--teal);
-    border-style: none;
-    padding: 3rem;
-    margin-top: 2rem;
-    border-radius: 24px;
-    color: var(--white);
-    font-size: 24px;
-  }
+.button {
+  padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: var(--white);
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+button:hover {
+  letter-spacing: 3px;
+  background-color: var(--info); /* Rosado claro */
+  color: #ffffff; /* Blanco */
+  box-shadow: rgb(245, 108, 108) 0px 7px 29px 0px; /* Sombras más suaves en el tono del botón */
+  border: 0;
+}
+
+button:active {
+  letter-spacing: 3px;
+  background-color: #fe5050; /* Un rosado más oscuro para el estado activo */
+  color: #ffffff; /* Blanco */
+  box-shadow: rgb(254, 80, 80) 0px 0px 0px 0px; /* Sin sombra al hacer clic */
+  transform: translateY(10px);
+  transition: 100ms;
+}
 
 #optionContainer{
   justify-content: center;
@@ -47,13 +63,20 @@ html, body {
   border-top:  1px var(--gray);
 }
 
-  #addImageButton, #deleteImageButton{
+  #addImageButton{
     background-color: var(--gray-dark);
     border-style: none;
     padding: 5px;
     margin: 0.25rem;
     color: var(--white);
     font-size: 14px;
+    cursor: pointer;
+  }
+
+  #addImageButton:hover{
+    box-shadow: inset;
+    letter-spacing: 0.5px;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
   }
 
 #imagePreview {
@@ -62,25 +85,22 @@ html, body {
     flex: 1;
     overflow: auto;
     background: var(--gray-dark);
-    width: 100%; /* Ocupa el ancho completo de la página */
+    width: 100%;
     align-items: center;
     justify-content: center;
   }
 
-  /* Hacer que el canvas ocupe todo el ancho */
 .image-wrapper canvas {
   margin: 1rem;
-  border: 1px solid #ccc; /* Opcional: bordes para visualizar mejor */
+  border: 1px solid #ccc; 
 }
 
-/* Opcional: Asegurarse de que los contenedores de las imágenes no se deformen */
+
 .image-wrapper {
-  width: 100%; /* Asegura que el contenedor se ajuste al ancho del canvas */
-  margin-bottom: 20px; /* Espacio entre las imágenes */
-  text-align: center; /* Centra el contenido dentro del wrapper */
+  width: 100%; 
+  margin-bottom: 20px; 
+  text-align: center; 
 }
-
-/* Opcional: Estilo de los controles */
 
   
   #controls{
@@ -117,9 +137,9 @@ html, body {
    flex-direction: row; 
   }
   
-  #cropButton, #downloadButton{
+  #cropButton, #downloadButton, #groupButton{
     background-color: var(--transparent);
-    border: solid 2px var(--button);
+    border: solid 2px var(--info);
     border-radius: 24px;
     color: var(--white);
     padding: 15px 32px;
@@ -127,15 +147,10 @@ html, body {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 1rem;
-  }
-
-  #cropButton:hover, #downloadButton:hover{
-    background-color: var(--button);
   }
   
   #heightCrop, #widthCrop{
-    border: solid 2px var(--teal);
+    border: solid 2px var(--dark);
     background-color: var(--dark);
     box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5);
     color: var(--white);
@@ -173,11 +188,3 @@ html, body {
 
   
   }
-  
-  
-  @media (max-width: 900px) {
-  
-  
-  
-  }
-  

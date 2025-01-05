@@ -13,64 +13,26 @@
 </head>
 <body>
 
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
-    <defs>
-        <linearGradient id="bg">
-            <stop offset="0%" style="stop-color:#1f100a"></stop>
-            <stop offset="50%" style="stop-color:#a46b2a"></stop>
-            <stop offset="100%" style="stop-color:#5f3724"></stop>
-        </linearGradient>
-        <path id="wave" fill="url(#bg)" d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
-s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z" />
-    </defs>
-    <g>
-        <use xlink:href='#wave' opacity=".3">
-            <animateTransform
-      attributeName="transform"
-      attributeType="XML"
-      type="translate"
-      dur="10s"
-      calcMode="spline"
-      values="270 230; -334 180; 270 230"
-      keyTimes="0; .5; 1"
-      keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
-      repeatCount="indefinite" />
-        </use>
-        <use xlink:href='#wave' opacity=".6">
-            <animateTransform
-      attributeName="transform"
-      attributeType="XML"
-      type="translate"
-      dur="8s"
-      calcMode="spline"
-      values="-270 230;243 220;-270 230"
-      keyTimes="0; .6; 1"
-      keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
-      repeatCount="indefinite" />
-        </use>
-        <use xlink:href='#wave' opacty=".9">
-            <animateTransform
-      attributeName="transform"
-      attributeType="XML"
-      type="translate"
-      dur="6s"
-      calcMode="spline"
-      values="0 230;-140 200;0 230"
-      keyTimes="0; .4; 1"
-      keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
-      repeatCount="indefinite" />
-        </use>
-    </g>
-</svg>
 
+<div class="global-div"> </div>
     <head>
-        <h1 style="color: var(--title);">Tatto<span class="icon-logo-tattoo"></span>SIZER </h1>
-        <p style="color: var(--info);">Tu herramienta online para ajustar tus diseños</p>
+        <article class="header">
+            <img src="/assets/img/HOPE.png" class="header-pj" alt="">
+        </article>
     </head>
 
     <main>
         
+        <article class="menuAjust">
+            <span>
+                <img src="/assets/img/logo.png" alt="">
+            </span>
+            <div>
+                <h3>Bienvenido a</h3>
+                <h2>TattooSIZER</h2>
+            </div>
+        </article>
+
         <article id="menuContainer">
         
             <a href="src/resize/resize.html">
@@ -87,13 +49,28 @@ s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.
                     <span class="uim--object-group"></span>
                     <h3>Agrupar</h3>
                     <label for="">Opcion para juntar todas tus imagenes en una</label>
-                    
-    
                 </section>
             </a>
-        </article>
 
+            <a href="src/group/group.html">
+                <section class="menuOption">
+                    <span class="material-symbols--safety-divider-rounded"></span>
+                    <h3>Separar</h3>
+                    <label for="">AUN NO PROGRAMADA</label>
+                </section>
+            </a>
+
+        </article>
     </main>
-    
+
+    <footer>
+        <article class="footer">
+            <span class="icon-one"></span>
+            <span class="icon-two"></span>
+            <span class="icon-three"></span>
+            <span class="icon-four"></span>
+            <span class="icon-five"></span>
+        </article>
+    </footer>
 </body>
 </html>

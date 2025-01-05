@@ -1,12 +1,11 @@
 :root {
     --red: #dc3545;
-    --teal: #5f3724;
-    --info:#834f25;
+    --info: #feafaf;
     --title: #a46b2a;
-    --background: #e4ccb0;
+    --background: #fe8282;
     --button:#5f3724;
-    --white: #ffffff;
-    --gray: #6c757d;
+    --white: #f6f5f4;
+    --gray: #878787;
     --soft-gray: #ebebeb;
     --gray-dark: #303030;
     --danger: #dc3545;
@@ -48,20 +47,35 @@ html {
 	}
   
   body {
+    position: relative;
     margin: 0;
     font-family: var(--font-family-sans-serif);
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: var(--white);
+    border: none;
     background-color: var(--background);
-    text-align: left;
     padding-top: 0;
-  
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
   }
-    body::-webkit-scrollbar {
-      width: 0;  /* Para navegadores basados en WebKit, como Chrome y Safari */
-    }
+
+  main, footer{
+    position: relative;
+    z-index: 3;
+  }
+
+  .global-div{
+    background-color: var(--background);
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+
 
   hr {
     box-sizing: content-box;
