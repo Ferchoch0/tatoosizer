@@ -14,6 +14,9 @@ html, body {
 #mainContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
   
 #buttonContainer{
@@ -24,7 +27,7 @@ html, body {
   padding: 3rem;
 }
 
-.button {
+#firstImageButton {
   padding: 17px 40px;
   border-radius: 50px;
   cursor: pointer;
@@ -37,26 +40,32 @@ html, body {
   transition: all 0.5s ease;
 }
 
-button:hover {
-  letter-spacing: 3px;
-  background-color: var(--info); /* Rosado claro */
-  color: #ffffff; /* Blanco */
-  box-shadow: rgb(245, 108, 108) 0px 7px 29px 0px; /* Sombras más suaves en el tono del botón */
-  border: 0;
+#firstImageButton:hover {
+  background-color: var(--gray-dark);
+  color: var(--white);
+  transform: scale(1.05);
+  border-top: 2px solid blueviolet;
+  border-left: 2px solid blueviolet;
+  border-bottom: 2px solid rgb(238, 103, 238)blueviolet;
+  border-right: 2px solid blueviolet;
+  box-shadow:
+    rgba(240, 46, 170, 0.4) 0px 5px,
+    rgba(240, 46, 170, 0.3) 0px 10px,
+    rgba(240, 46, 170, 0.2) 0px 15px;
 }
 
-button:active {
-  letter-spacing: 3px;
-  background-color: #fe5050; /* Un rosado más oscuro para el estado activo */
-  color: #ffffff; /* Blanco */
-  box-shadow: rgb(254, 80, 80) 0px 0px 0px 0px; /* Sin sombra al hacer clic */
+#firstImageButton:active {
+  opacity: 0.8;
+  background-color: var(--dark);
+  color: var(--soft-gray);
   transform: translateY(10px);
   transition: 100ms;
 }
 
 #optionContainer{
   justify-content: center;
-  position: relative; 
+  top: 100px;
+  position: fixed; 
   width: 100%; 
   z-index: 1000; 
   background: var(--soft-dark);
@@ -74,9 +83,10 @@ button:active {
   }
 
   #addImageButton:hover{
-    box-shadow: inset;
-    letter-spacing: 0.5px;
-    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    border-top: 2px solid blueviolet;
+    border-left: 2px solid blueviolet;
+    border-bottom: 2px solid rgb(238, 103, 238);
+    border-right: 2px solid rgb(238, 103, 238);
   }
 
 #imagePreview {
@@ -109,6 +119,8 @@ button:active {
     flex-direction: column;
     background-color: var(--dark);
     width: 100%;
+    padding: 1rem 0;
+    gap: 0.75rem;
   }
 
   .controls-container{
@@ -135,11 +147,15 @@ button:active {
   .controlSection3{
    display: flex;
    flex-direction: row; 
+   gap: 30px;
   }
   
   #cropButton, #downloadButton, #groupButton{
     background-color: var(--transparent);
-    border: solid 2px var(--info);
+    border-top: 2px solid blueviolet;
+    border-left: 2px solid blueviolet;
+    border-bottom: 2px solid rgb(238, 103, 238);
+    border-right: 2px solid rgb(238, 103, 238);
     border-radius: 24px;
     color: var(--white);
     padding: 15px 32px;
@@ -147,6 +163,19 @@ button:active {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+  }
+
+  #cropButton:hover, #downloadButton:hover, #groupButton:hover{
+    transition: all 0.5s ease;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  }
+
+  #cropButton:active, #downloadButton:active, #groupButton:active{
+    opacity: 0.8;
+    color: var(--soft-gray);
+    transform: translateY(5px);
+    transition: 100ms;
   }
   
   #heightCrop, #widthCrop{
@@ -181,7 +210,7 @@ button:active {
 
   #cropButton, #downloadButton{
     padding: 15px 22px;
-    font-size: 13px;
+    font-size: 10px;
     margin: 0.5rem;
   }
 

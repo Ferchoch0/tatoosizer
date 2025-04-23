@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo.png" />
     
     <link rel="stylesheet" href="../../assets/css/global.css">
     <link rel="stylesheet" href="../../assets/css/resize.css">    
@@ -13,24 +14,32 @@
 </head>
 <body>
 
+    <nav class="nav">
+        <a href="../../index.html" class="menu-nav">
+            <span>
+                <img src="/assets/img/logo.png" alt="">
+            </span>
+            <div>
+                <h3>Bienvenido a</h3>
+                <h2>TattooSIZER</h2>
+            </div>
+        </a>
+    </nav>
+    
     <main id="mainContainer">
 
-        <nav>
-            <h1 className='am-navbar-title'>
-                        <a href="../../index.html">TattoSIZER </a> 
-            </h1>
-          </nav> 
+          <div id="optionContainer" style="display: none;">
+            <button id="addImageButton">Agregar Imágenes</button>
+        </div>  
 
         <section id="imageUpload">
             <input type="file" id="imageInput" accept="image/*" multiple  style="display:none;">
             <div id="buttonContainer">
                 <img src="/assets/img/logo.png" class="logo" alt="logo">
-                <h1 style="color: var(--soft-gray);">Junta varias imagenes</h1>
+                <h1 style="color: var(--soft-dark);">Junta varias imagenes</h1>
                 <button id="firstImageButton" class="button">Seleccionar</button>
             </div>
-            <div id="optionContainer" style="display: none;">
-                <button id="addImageButton">Agregar Imágenes</button>
-            </div>            
+                      
 
         </section>
 

@@ -14,59 +14,15 @@
     height: 80vh;
   }
 
-.menuAjust{
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-top: 3rem;
-  padding-left: 3rem;
-  background-color: var(--soft-dark);
-  gap: 10px;
-  height: 150px;
-  border-radius: 7% 7% 0% 0% / 24% 24% 0% 0%  ;
-  line-height: 0.9;
-  z-index: 2;
-}
-
-  .menuAjust span{
-    background-color: var(--gray);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-  }
-
-    span img{
-      width:  60px;
-      height: 60px;
-    }
-
-    .menuAjust span:hover, .menuAjust span img:hover{
-      transform: scale(1.1);
-      transition: ease-in-out 0.3s;
-    }
-
-  .menuAjust h3{
-    color: var(--gray);
-    font-size: 0.75rem;
-  }
-
-  .menuAjust h2{
-    color: var(--white);
-
-  }
-
 #menuContainer{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background-color: var(--soft-dark);
   width: 100%;
-
+  gap: 1rem;
+  height: calc(100vh - 100px);
 }
 
 #menuContainer section{
@@ -78,25 +34,37 @@
   margin: 1rem;
   padding: 10px;
   border-radius: 24px;
+  border-bottom: 2px solid blueviolet;
+  border-right: 2px solid blueviolet;
+  border-top: 2px solid linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  border-left: 2px solid linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); /* Sombra externa */
-  color: var(--gray);
-  background-color: var(--white);
+  color: var(--white);
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 }
 
   #menuContainer section:hover{
     transform: scale(1.1);
-    transition: ease-in-out 0.3s;}
+    transition: ease-in-out 0.3s;
+    border-top: 2px solid blueviolet;
+    border-left: 2px solid blueviolet;
+    border-bottom: 2px solid rgb(238, 103, 238);
+    border-right: 2px solid rgb(238, 103, 238);
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px;
+  }
 
   #menuContainer section:active{
     opacity: 0.8;
     background-color: var(--background);
-    color: var(--white);
+    color: var(--soft-gray);
     transform: translateY(10px);
     transition: 100ms;
   }
 
 #menuContainer section h3{
-  color: var(--soft-dark);
+  color: var(--white);
 }
 
 
@@ -107,7 +75,6 @@
   align-items: center;
   background-color: var(--soft-dark);
   height: 100px;
-  padding-top: 5rem;
 }
 
 
@@ -117,8 +84,9 @@
   height: 40vh;  
 }
 
+
 #menuContainer{
-  flex-direction: column;
+  height: auto;
 }
 
 .header-pj{
@@ -130,12 +98,6 @@
   display: none;
 }
 
-.menuAjust{
-  padding-left: 0;
-  justify-content: center;
-  gap: 20px;
-  border-radius: 15% 15% 0% 0% / 30% 30% 0% 0%  ;
-}
 
 .footer{
   justify-content: center;
